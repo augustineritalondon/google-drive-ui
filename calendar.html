@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="ngApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="assets/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="assets/vendors/bower_components/animate.css/animate.min.css">
+        <link rel="stylesheet" href="assets/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="assets/vendors/bower_components/fullcalendar/dist/fullcalendar.min.css">
+        <link rel="stylesheet" href="assets/vendors/bower_components/jqTree/jqtree.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="assets/css/app.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body data-ma-theme="blue">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                </div>
+            </div>
+
+            <header class="header no-shadow bg-white">
+                <div class="navigation-trigger visible-xs" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                    </div>
+                </div>
+                <div class="header__logo hidden-sm-down">
+                    <h1 class="text-info fs-20">Material <span class="text-success">Design</span></h1>
+                </div>
+
+                <form class="search">
+                    <div class="search__inner text-black">
+                        <input type="text" class="search__text bg-gray-light" placeholder="Search for people, files, documents...">
+                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                    </div>
+                </form>
+
+                <ul class="top-nav">
+                    <li class="dropdown">
+                        <div class="user">
+                            <div class="user__info" data-toggle="dropdown">
+                                
+                                <i class="avatar-char fs-30"><i class="zmdi zmdi-account-circle text-info"></i></i>
+                                
+                                <div>
+                                    <div class="user__name text-dark">Malinda Hollaway</div>
+                                    <div class="user__email text-default"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="751814191c1b1114581d351218141c195b161a18">[email&#160;protected]</a></div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-menu m-t-40" style="position: relative; top: 40px;">
+                                <a class="dropdown-item" href="#">View Profile</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li class="hidden-xs-down">
+                        <a href="#" data-toggle="collapse" data-target="#collapse1">
+                            <i class="zmdi zmdi-search text-black"></i>
+                        </a>
+                    </li> -->
+                </ul>
+                
+                <!-- <ul class="nav top-menu bg-blue b-b no-shadow">
+                    <li class="nav-item"><a href="{{baseurl}}Support/Faq" class="nav-link">Frequently Asked Questions</a></li>
+                    <li class="nav-item"><a href="{{baseurl}}Support/Privacy-Policy" class="nav-link">Privacy Policy</a></li>
+                </ul> -->
+
+                <div id="collapse1" class="bg-gray no-shadow container top-menu collapse in">
+                    <form class="search mb-1">
+                        <div class="search__inner">
+                            <input type="text" class="search__text bg-blue-grey" placeholder="Search for people, files, documents...">
+                            <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                        </div>
+                    </form>
+                </div>
+            </header>
+
+            <aside class="sidebar">
+                <div class="scrollbar-inner">
+                        <ul class="navigation">
+                            <li [ngClass]="(url == '/Dashboard') ? 'active' : ''"><a routerLink="/Dashboard"><i class="zmdi zmdi-local-store"></i> Dashboard</a></li>
+                            
+                            <li [ngClass]="(url == '/Products') ? 'navigation__sub--toggled' : ''" class="navigation__sub">
+                                <a href="#"><i class="zmdi zmdi-dns"></i>Products</a>
+                                <ul id="products">                             
+                                    <li [ngClass]="(url == '/Products') ? 'active' : ''"><a routerLink="/Products"> Items</a></li>
+                                    <li [ngClass]="(url == '/Products/Category') ? 'active' : ''"><a routerLink="/Products/Category"> Categories</a></li>
+                                    <li [ngClass]="(url == '/Products/Reviews') ? 'active' : ''"><a routerLink="/Products/Reviews"> Reviews </a></li>
+                                    <li [ngClass]="(url == '/Products/Orders') ? 'active' : ''"><a routerLink="/Products/Orders"> Orders </a></li>
+                                </ul>
+                            </li>
+                    
+                            <li class="navigation__sub">
+                                <a href="#"><i class="zmdi zmdi-cast-connected"></i>Events</a>
+                                <ul id="posts">                             
+                                    <li [ngClass]="(url == '/Posts') ? 'active' : ''"><a routerLink="/Posts"> Posts</a></li>
+                                    <li [ngClass]="(url == '/Posts/Category') ? 'active' : ''"><a routerLink="/Posts/Category"> Categories</a></li>
+                                    <li [ngClass]="(url == '/Posts/Comments') ? 'active' : ''"><a routerLink="/Posts/Comments"> Comments</a></li>
+                                </ul>
+                            </li>
+                            <hr />
+                            <li [ngClass]="(url == '/Widgets/Slides') ? 'active' : ''">
+                                <a routerLink="/Widgets/Slides"> <i class="zmdi zmdi-collection-folder-image"></i>Slides</a>
+                            </li>
+                            <li [ngClass]="(url == '/Widgets/Testimonials') ? 'active' : ''">
+                                <a routerLink="/Widgets/Testimonials"><i class="zmdi zmdi-comment-more"></i>Testimonials</a>
+                            </li>
+                    
+                            <li [ngClass]="(url == '/Views/Faqs') ? 'active' : ''">
+                                <a routerLink="/Views/Faqs"><i class="zmdi zmdi-pin-help"></i>Frequently Asked Questions</a>
+                            </li>
+                            <hr />
+                            <li [ngClass]="(url == '/Accounts/Users') ? 'active' : ''">
+                                <a routerLink="/Accounts/Users"><i class="zmdi zmdi-accounts"></i>Accounts</a>
+                            </li>
+                    
+                            <li>
+                                <a (click)="logout()"><i class="zmdi zmdi-lock"></i>Logout</a>
+                            </li>
+                        </ul>
+                </div>
+            </aside>
+            
+            <section class="content">
+                <div class="content__inner">
+                    <div class="messages row">
+                        <div class="col-md-4 messages__sidebar no-padding"> 
+                            <form class="search">
+                                <div class="search__inner text-black">
+                                    <input autofocus type="text" class="bg-gray text-black search__text" placeholder="Search for people, files, documents...">
+                                    <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                                </div>
+                            </form>
+
+                            <div class="listview listview--bordered listview--striped">
+                                <div class="scrollbar-inner">
+                                    <a class="listview__item" href="">
+                                        <img src="demo/img/profile-pics/4.jpg" alt="" class="listview__img">
+
+                                        <div class="listview__content">
+                                            <div class="listview__heading">Davil Parnell</div>
+                                            <p>Fierent fastidii recteque ad pro</p>
+                                        </div>
+                                    </a>
+
+                                    <a class="listview__item listview__item--active" href="">
+                                        <div class="pull-left">
+                                            <img src="demo/img/profile-pics/8.jpg" alt="" class="listview__img">
+                                        </div>
+                                        <div class="listview__content">
+                                            <div class="listview__heading">Ann Watkinson</div>
+                                            <p>Cum sociis natoque penatibus </p>
+                                        </div>
+                                    </a>
+
+                                    <a class="listview__item" href="">
+                                        <div class="pull-left">
+                                            <img src="demo/img/profile-pics/3.jpg" alt="" class="listview__img">
+                                        </div>
+                                        <div class="listview__content">
+                                            <div class="listview__heading">Marse Walter</div>
+                                            <p>Suspendisse sapien ligula</p>
+                                        </div>
+                                    </a>
+
+                                    <a class="listview__item" href="">
+                                        <div class="pull-left">
+                                            <img src="demo/img/profile-pics/2.jpg" alt="" class="listview__img">
+                                        </div>
+                                        <div class="listview__content">
+                                            <div class="listview__heading">Jeremy Robbins</div>
+                                            <p>Phasellus porttitor tellus nec</p>
+                                        </div>
+                                    </a>
+
+                                    <a class="listview__item" href="">
+                                        <div class="pull-left">
+                                            <img src="demo/img/profile-pics/4.jpg" alt="" class="listview__img">
+                                        </div>
+                                        <div class="listview__content">
+                                            <div class="listview__heading">Reginald Horace</div>
+                                            <p>Quisque consequat arcu eget</p>
+                                        </div>
+                                    </a>
+
+                                    <a class="listview__item" href="">
+                                        <div class="pull-left">
+                                            <img src="demo/img/profile-pics/5.jpg" alt="" class="listview__img">
+                                        </div>
+                                        <div class="listview__content">
+                                            <div class="listview__heading">Shark Henry</div>
+                                            <p>Nam lobortis odio et leo maximu</p>
+                                        </div>
+                                    </a>
+
+                                    <a class="listview__item" href="">
+                                        <div class="pull-left">
+                                            <img src="demo/img/profile-pics/2.jpg" alt="" class="listview__img">
+                                        </div>
+                                        <div class="listview__content">
+                                            <div class="listview__heading">Paul Van Dack</div>
+                                            <p>Nam posuere purus sed velit auctor sodales</p>
+                                        </div>
+                                    </a>
+
+                                    <a class="listview__item" href="">
+                                        <div class="pull-left">
+                                            <img src="demo/img/profile-pics/1.jpg" alt="" class="listview__img">
+                                        </div>
+                                        <div class="listview__content">
+                                            <div class="listview__heading">James Anderson</div>
+                                            <p>Vivamus imperdiet sagittis quam</p>
+                                        </div>
+                                    </a>
+
+                                    <a class="listview__item" href="">
+                                        <div class="pull-left">
+                                            <img src="demo/img/profile-pics/3.jpg" alt="" class="listview__img">
+                                        </div>
+                                        <div class="listview__content">
+                                            <div class="listview__heading">Kane Williams</div>
+                                            <p>Suspendisse justo nulla luctus nec</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 messages__body no-padding">
+                            <div class="messages__content no-padding">
+                                <div class="widget-calendar">
+                                    <div class="widget-calendar__header bg-blue">
+                                        
+                                        <span class="widget-calendar__day"></span> <span class="widget-calendar__year"></span>
+            
+                                    </div>
+            
+                                    <div class="widget-calendar__body"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <a href="#" class="btn-md animated bounceIn btn btn--fixed btn--action bg-blue text-dark">
+                <i class="zmdi zmdi-comments"></i>
+            </a>
+        </main>
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="assets/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="assets/vendors/bower_components/tether/dist/js/tether.min.js"></script>
+        <script src="assets/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="assets/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="assets/vendors/bower_components/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+        <script src="assets/vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="assets/vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="assets/vendors/bower_components/jqTree/tree.jquery.js"></script>
+
+
+        <!-- App functions and actions -->
+        <script src="assets/js/app.min.js"></script>
+    </body>
+</html>

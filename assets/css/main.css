@@ -1,0 +1,51 @@
+.header{
+    min-height: 70px;
+    border-bottom: 1px solid #707070;
+    width: 100%;
+    opacity: 0.4;
+}
+
+.fa{
+    margin-top: 0px;
+}
+
+.nav-icons{
+    color: #707070;
+    padding-right: 2%;
+}
+
+.profile-icon{
+    color: rgb(0, 78, 0);
+}
+
+.ni{
+    float: right;
+    padding-left: 15px;
+}
+
+.btnstyle{
+    margin-left: 30px;
+    border-radius: 50px 50px 50px 50px;
+    padding: 15px 30px 15px 30px;
+    background-color: white;
+}
+
+.prog{
+    margin-left: 70px;
+    width: 50%;
+}
+
+.infor{
+    margin-left: 70px;
+}
+
+.side{
+    height: 92vh;
+    width: 50px;
+    border-left: 1px solid #b3b3b3;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    margin-left: 50%;
+    background: rgb(243, 243, 243);
+}

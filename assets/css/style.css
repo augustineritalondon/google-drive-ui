@@ -1,0 +1,250 @@
+.h-100
+{
+    height: 100vh !important;
+}
+input.bg-gray::placeholder
+{
+    color: #000 !important;
+}
+input.bg-gray-light::placeholder
+{
+    color: #999 !important;
+}
+.text-black *
+{
+    color: #000 !important;
+}
+.text-default
+{
+    color: #999 !important;
+}
+.no-shadow
+{
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+ul.top-nav .user
+{
+    background-color: transparent !important;
+    position: relative; 
+    top: 10px; 
+    float: right;
+}
+.header
+{
+    height: 60px !important
+}
+.hidden
+{
+    display: none !important;
+}
+.no-padding
+{
+    padding: 0px !important;
+}
+.no-margin
+{
+    margin: 0px !important;
+}
+.bg-gray
+{
+    background-color: #fafafa !important;
+}
+.text-gray
+{
+    color: #ddd;
+}
+.padding-10
+{
+    padding: 10px !important;
+}
+.padding-15
+{
+    padding: 15px !important;
+}
+.padding-20
+{
+    padding: 20px !important;
+}
+.bold
+{
+    font-weight: 500 !important;
+}
+.fs-18
+{
+    font-size: 18px !important;
+}
+.fs-40
+{
+    font-size: 40px !important;
+}
+.fs-30
+{
+    font-size: 30px !important;
+}
+.fs-20
+{
+    font-size: 20px !important;
+}
+.fs-25
+{
+    font-size: 25px !important;
+}
+.fs-12
+{
+    font-size: 12px !important;
+}
+.fs-14
+{
+    font-size: 14px !important;
+}
+.fs-16
+{
+    font-size: 16px !important;
+}
+.text-default
+{
+    color: #999 !important;
+}
+.fw-100
+{
+    font-weight: 100 !important;
+}
+.bg-gray-light
+{
+    background-color: #eee !important;
+}
+.shadow-bottom
+{
+    box-shadow: 5px 0px 10px rgba(0,0,0,.08);
+}
+.b-l
+{
+    border-left: 1px solid #eee;
+}
+.b-r
+{
+    border-right: 1px solid #eee;
+}
+.top-menu
+{
+    justify-content:left !important;
+    padding-left: 20px !important;
+}
+.b-b
+{
+    border-bottom: 1px solid #eee !important;
+}
+.b-t
+{
+    border-top: 1px solid #eee !important;
+}
+.top-nav li
+{
+    font-size: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.top-nav.pull-left
+{
+    position: relative !important;
+    left: -50px !important;
+}
+.sidebar
+{
+    padding-right: -30px !important;
+    margin-right: 20px !important;
+    width: 250px !important;
+}
+.sidebar > .scrollbar-inner
+{
+    margin-top: 20px !important;
+    margin-right: -29px !important;
+    margin-left: -35px !important;
+    width: 240px !important;
+}
+.sidebar > .scrollbar-inner li a
+{
+    padding-left: 30px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+}
+.sidebar > .scrollbar-inner li.navigation__active,
+.sidebar > .scrollbar-inner li.navigation__active:focus,
+.sidebar > .scrollbar-inner li.navigation__active:hover,
+.sidebar > .scrollbar-inner li.navigation__active a,
+.sidebar > .scrollbar-inner li a:hover
+{
+    background-color: #999 !important;
+    border-top-right-radius: 100px !important;
+    border-bottom-right-radius: 100px !important;
+    color: #999 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+}
+.sidebar > .scrollbar-inner li
+{
+    margin-bottom: 3px !important;
+    border-top-right-radius: 100% !important;
+    border-bottom-right-radius: 100% !important;
+    margin-right: 5px;
+}
+.sidebar > .scrollbar-inner li a  > i
+{
+    /* font-size: qpx !important; */
+    margin-top: 2px !important;
+    margin-right: 10px !important;
+}
+.sidebar > .scrollbar-inner .scroll-y
+{
+    border-radius: 1px !important;
+    width: 10px !important;
+}
+.content
+{
+    padding-left: 250px !important;
+    margin-top: -40px !important;
+    /* padding-top: 20px !important; */
+}
+.content .content__title
+{
+    padding-left: 0px !important;
+}
+.messages
+{
+    min-height: 90vh !important;
+    border: 0px !important;
+}
+form.search
+{
+    width: 100% !important;
+    margin-bottom: 5px;
+}
+/* form.search input
+{
+    height: 50px !important;
+} */
+.messages__sidebar .scrollbar-inner, .messages__sidebar .listview
+{
+    min-height: 90vh !important;
+}
+.widget-calendar__header
+{
+    padding: 25px 20px !important;
+}
+@media only screen and (max-width: 600px) 
+{
+    .sidebar
+    {
+        z-index: 999 !important;
+    }
+    .content
+    {
+        margin-top: -10px !important;
+        padding-left: 5% !important;
+    }
+    .navigation-trigger i
+    {
+        background-color: #999 !important;
+    }
+}

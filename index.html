@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Vendor styles -->
+    <link rel="stylesheet"
+        href="assets/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="assets/vendors/bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="assets/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.css">
+    <!-- App styles -->
+    <link rel="stylesheet" href="assets/css/app.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body data-ma-theme="blue">
+    <main class="main">
+        <div class="page-loader">
+            <div class="page-loader__spinner">
+                <svg viewBox="25 25 50 50">
+                    <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                </svg>
+            </div>
+        </div>
+
+        <header class="header bg-white">
+            <div class="navigation-trigger visible-xs" data-ma-action="aside-open" data-ma-target=".sidebar">
+                <div class="navigation-trigger__inner text-black">
+                    <i class="navigation-trigger__line text-black"></i>
+                    <i class="navigation-trigger__line text-black"></i>
+                    <i class="navigation-trigger__line text-black"></i>
+                </div>
+            </div>
+            <div class="header__logo hidden-sm-down">
+                <h1 class="text-info fs-20 b-r">Google <span class="text-success">Drive</span> </h1>
+            </div>
+
+
+            <!-- <ul class="top-nav pull-left">
+                    <li class="active">
+                        <a class="nav-link text-default" href="{{baseurl}}">Home</a>
+                    </li>
+                    <li class="active">
+                        <a class="nav-link text-default" href="{{baseurl}}Contact-Us">Contact Us</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-default" href="{{baseurl}}Training">Training</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-default" href="{{baseurl}}Events">Events</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-default" href="{{baseurl}}About-Us">About Us</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-default" href="{{baseurl}}Support">Support</a>
+                    </li>
+                </ul> -->
+
+            <form class="search">
+                <div class="search__inner text-black">
+                    <input type="text" class="search__text bg-gray-light" placeholder="Search Drive">
+                    <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                </div>
+            </form>
+
+
+            <i class="fa fa-check-circle-o fa-2x nav-icons" aria-hidden="true"></i>
+            <i class="fa fa-question-circle-o fa-2x nav-icons" aria-hidden="true"></i>
+            <i class="fa fa-cog fa-2x nav-icons" aria-hidden="true"></i>
+            <i class="fa fa-bars fa-2x nav-icons" aria-hidden="true"></i>
+            <i class="fa fa-user-circle fa-2x profile-icon" aria-hidden="true"></i>
+
+
+            <!-- <ul class="top-nav">
+                    <li class="dropdown">
+                        <div class="user">
+                            <div class="user__info" data-toggle="dropdown">
+                                
+                                <i class="avatar-char fs-30"><i class="zmdi zmdi-account-circle text-info"></i></i>
+                                 -->
+            <!-- <div>
+                                    <div class="user__name text-dark">Malinda Hollaway</div>
+                                    <div class="user__email text-default"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="751814191c1b1114581d351218141c195b161a18">[email&#160;protected]</a></div>
+                                </div> -->
+            <!-- </div>
+
+                            <div class="dropdown-menu m-t-40" style="position: relative; top: 40px;">
+                                <a class="dropdown-item" href="#">View Profile</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden-xs-down">
+                        <a href="#" data-toggle="collapse" data-target="#collapse1">
+                            <i class="zmdi zmdi-search text-black"></i>
+                        </a>
+                    </li>
+                </ul> -->
+
+            <!-- <ul class="nav top-menu bg-gray b-b no-shadow">
+                    <li class="nav-item"><a href="{{baseurl}}Support/Faq" class="nav-link">Frequently Asked Questions</a></li>
+                    <li class="nav-item"><a href="{{baseurl}}Support/Privacy-Policy" class="nav-link">Privacy Policy</a></li>
+                </ul> -->
+
+            <!-- <div id="collapse1" class="bg-gray no-shadow container top-menu collapse in">
+                    <form class="search mb-1">
+                        <div class="search__inner">
+                            <input type="text" class="search__text bg-blue-grey" placeholder="Search for people, files, documents...">
+                            <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                        </div>
+                    </form>
+                </div> -->
+        </header>
+
+
+
+
+
+        <aside class="sidebar">
+            <div class="scrollbar-inner">
+                <div class="container"> <button class="btn btn-light btn-lg btnstyle"><i class="fa fa-plus fa-1x"
+                            aria-hidden="true"></i> New</button></div>
+
+                <ul class="navigation">
+                    <li [ngClass]="(url == '/Dashboard') ? 'active' : ''"><a routerLink="/Dashboard"><i
+                                class="fa fa-hdd-o" aria-hidden="true"></i> My Drive</a></li>
+
+                    <li [ngClass]="(url == '/Products') ? 'navigation__sub--toggled' : ''" class="navigation__sub">
+                        <a href="#"><i class="fa fa-laptop" aria-hidden="true"></i> Computers</a>
+                        <!-- <ul id="products">
+                            <li [ngClass]="(url == '/Products') ? 'active' : ''"><a routerLink="/Products"> Items</a>
+                            </li>
+                            <li [ngClass]="(url == '/Products/Category') ? 'active' : ''"><a
+                                    routerLink="/Products/Category"> Categories</a></li>
+                            <li [ngClass]="(url == '/Products/Reviews') ? 'active' : ''"><a
+                                    routerLink="/Products/Reviews"> Reviews </a></li>
+                            <li [ngClass]="(url == '/Products/Orders') ? 'active' : ''"><a
+                                    routerLink="/Products/Orders"> Orders </a></li>
+                        </ul> -->
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"> <i class="fa fa-users" aria-hidden="true"></i> Shared with me</a>
+                        <!-- <ul id="posts">
+                            <li [ngClass]="(url == '/Posts') ? 'active' : ''"><a routerLink="/Posts"> Posts</a></li>
+                            <li [ngClass]="(url == '/Posts/Category') ? 'active' : ''"><a routerLink="/Posts/Category">
+                                    Categories</a></li>
+                            <li [ngClass]="(url == '/Posts/Comments') ? 'active' : ''"><a routerLink="/Posts/Comments">
+                                    Comments</a></li>
+                        </ul> -->
+                    </li>
+                    <li [ngClass]="(url == '/Widgets/Slides') ? 'active' : ''">
+                        <a routerLink="/Widgets/Slides"><i class="fa fa-clock-o" aria-hidden="true"></i> Recent</a>
+                    </li>
+                    <li [ngClass]="(url == '/Widgets/Testimonials') ? 'active' : ''">
+                        <a routerLink="/Widgets/Testimonials"><i class="fa fa-star-o" aria-hidden="true"></i>
+                            Starred</a>
+                    </li>
+
+                    <li [ngClass]="(url == '/Views/Faqs') ? 'active' : ''">
+                        <a routerLink="/Views/Faqs"><i class="fa fa-trash-o" aria-hidden="true"></i> Trash</a>
+                    </li>
+
+                    <hr />
+                    <li [ngClass]="(url == '/Accounts/Users') ? 'active' : ''">
+                        <a routerLink="/Accounts/Users"><i class="fa fa-mobile" aria-hidden="true"></i> Backups </a>
+                    </li>
+                    <hr />
+                    <li>
+                        <a (click)="logout()"><i class="fa fa-server" aria-hidden="true"></i> </i>Storage</a>
+                        <div class="progress prog" style="height: 2px;">
+                            <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="infor">
+                            1.2GB of 15GB used
+                            <P style="color: blue">UPGRADE STORAGE</P>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+
+
+        <section class="content">
+            <header class="content__title mt-3 mb-1 row">
+                <div class="dropdown col-9">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        My Drive
+                    </button>
+                    <div class="dropdown-menu mt-5" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Something</a>
+                        <a class="dropdown-item" href="#">Something1</a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-table fa-2x nav-icons ni" aria-hidden="true"></i>
+                    <i class="fa fa-info-circle fa-2x nav-icons ni"></i>
+                </div>
+            </header>
+            <hr>
+
+            <div class="quick">
+                <p>Quick Access</p>
+            </div>
+
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Owner</th>
+                            <th scope="col">Last Modified</th>
+                            <th scope="col">File Size</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <!-- <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="quick-stats__item bg-blue">
+                        <div class="quick-stats__info">
+                            <h2>987,459</h2>
+                            <small>Total Website Traffics</small>
+                        </div>
+
+                        <div class="quick-stats__chart sparkline-bar-stats">6,4,8,6,5,6,7,8,3,5,9,5</div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="quick-stats__item bg-amber">
+                        <div class="quick-stats__info">
+                            <h2>356,785K</h2>
+                            <small>Total Website Impressions</small>
+                        </div>
+
+                        <div class="quick-stats__chart sparkline-bar-stats">4,7,6,2,5,3,8,6,6,4,8,6</div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+        <aside class="side container">
+            <div>
+                <a href="#"><img
+                        src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/128/calendar-icon.png"
+                        width="28" class="mt-3" alt=""></a>
+                <a href="#"><img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/128/Keep-icon.png"
+                        width="28" class="mt-5" alt=""></a>
+                <a href="#"><img
+                        src="http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Other-Tasks-Metro-icon.png"
+                        width="26" class="mt-5" alt=""></a>
+            </div>
+        </aside>
+
+
+
+        <a href="#" class="btn-md animated bounceIn btn btn--fixed btn--action bg-blue text-dark">
+            <i class="zmdi zmdi-comments"></i>
+        </a>
+    </main>
+
+    <!-- Javascript -->
+    <!-- Vendors -->
+    <script src="assets/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendors/bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="assets/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/bower_components/Waves/dist/waves.min.js"></script>
+    <script src="assets/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="assets/vendors/bower_components/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+    <!-- App functions and actions -->
+    <script src="assets/js/app.min.js"></script>
+</body>
+
+</html>
