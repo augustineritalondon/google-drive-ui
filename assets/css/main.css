@@ -1,8 +1,11 @@
 .header{
     min-height: 70px;
-    border-bottom: 1px solid #707070;
+    border-bottom: 1px solid #b3b3b3;
     width: 100%;
-    opacity: 0.4;
+}
+
+.width{
+    max-width: 900px;
 }
 
 .fa{
@@ -11,7 +14,12 @@
 
 .nav-icons{
     color: #707070;
-    padding-right: 2%;
+    padding-right: 5%;
+    padding-left: 2%;
+}
+
+.nav-dropdown{
+    margin-right: 20px;
 }
 
 .profile-icon{
@@ -30,6 +38,18 @@
     background-color: white;
 }
 
+.btnstyle:hover, 
+.btnstyle:focus{
+    animation: btnstyle 1s;
+    box-shadow: 0 0 7em rgba(33,33,33,.2); 
+}
+
+@keyframes btnstyle{
+    0%{
+        box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
 .prog{
     margin-left: 70px;
     width: 50%;
@@ -40,7 +60,7 @@
 }
 
 .side{
-    height: 92vh;
+    height: 90vh;
     width: 50px;
     border-left: 1px solid #b3b3b3;
     position: absolute;
@@ -48,4 +68,41 @@
     right: 0;
     margin-left: 50%;
     background: rgb(243, 243, 243);
+}
+
+.drop{
+    min-width: 250px;
+}
+
+.google{
+    color: rgb(236, 65, 22);
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+}
+
+.dropi{
+    min-width: 350px;
+}
+ 
+.span{
+    color: blue;
+}
+
+.button{
+    float: right;
+}
+
+.more{
+    margin-left: 110px;
+}
+
+.dropii{
+    min-width: 300px;
+}
+
+.displ{
+    display: inline;
 }
