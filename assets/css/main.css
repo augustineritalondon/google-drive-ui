@@ -106,3 +106,43 @@
 .displ{
     display: inline;
 }
+
+.log{
+    border: 1px solid #b3b3b3;
+    border-radius: 5px 6px 5px 6px;
+    margin-top: 200px;
+    margin-left: 550px;
+    margin-right: 550px;
+}
+
+.dreams{
+    width: 300px;
+    height: 300px;
+    margin-top: -35px;
+}
+
+.mt{
+    text-align: center;
+    font-size: 17px;
+}
+
+form#one input {
+    border: 1px solid #b3b3b3;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.dflex{
+    text-align: left;
+}
+
+.helen{
+    margin-left: -90px;
+}
+
+.views{
+    margin-top: -25px;
+    width: 50px;
+}
+
+
+  
