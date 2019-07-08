@@ -144,5 +144,15 @@ form#one input {
     width: 50px;
 }
 
+.trial{
+    overflow-y: scroll;
+    max-height: 250px;
+}
+
+.float{
+    position: absolute;
+    left: 320px;
+}
+
 
   
