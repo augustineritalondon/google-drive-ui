@@ -150,9 +150,39 @@ form#one input {
 }
 
 .float{
-    position: absolute;
-    left: 320px;
+    text-align: right;
 }
 
-
+.style{
+    text-align: center;
+}
   
+.log1{
+    border: 1px solid #b3b3b3;
+    border-radius: 5px 6px 5px 6px;
+    margin-top: 200px;
+    margin-left: 750px;
+    margin-right: 750px;
+    height: 500px;
+}
+
+.sign{
+    text-align: right;
+}
+
+.fasize{
+    font-size: 35px;
+}
+
+.fafont{
+    font-size: 25px;
+}
+
+.email input{
+    padding: 15px 10px;
+}
+
+.email span{
+    text-align: justify;
+    margin-top: 5px;
+}
